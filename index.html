@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 136 - Exercício Prático</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1>Brasileirão série A</h1>
+
+        <div id="content">
+            <p id="content1">Primeiro colocado : Botafogo</p>
+            <div id="content2">Segundo colocado : Palmeiras</div>
+            <h2 id="content3">Parte de cima da tabela</h2>
+            <ul id="content4">
+                <li>Botafogo</li>
+                <li>Palmeiras</li>
+                <li>Bragantino</li>
+            </ul>
+            <span id="content5"></span>
+        </div>
+
+        <h1>Primeiro e Segundo colocado</h1>
+
+        <div id="innerContent">
+            <p id="inner1"></p>
+            <div id="inner2"></div>
+            <h2 id="inner3"></h2>
+        </div>
+
+        <h1>Aposte no time que vai ser o campeão do Brasileirão</h1>
+
+        <form id="myForm">
+            <input type="text" id="inputField" class="form-control" placeholder="Digite algo">
+            <button type="submit" class="btn btn-primary mt-2">Aposte</button>
+        </form>
+
+        <h1>Aposta recomendadas</h1>
+
+        <button id="button1" class="btn btn-success">Botafogo</button>
+        <button id="button2" class="btn btn-danger ml-2">Palmeiras</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            var content1 = document.getElementById('content1').textContent;
+            var content2 = document.getElementById('content2').textContent;
+            var content3 = document.getElementById('content3').textContent;
+            var content4 = document.getElementById('content4').textContent;
+            var content5 = document.getElementById('content5').textContent;
+
+           
+            document.getElementById('inner1').innerHTML = content1;
+            document.getElementById('inner2').innerHTML = content2;
+            document.getElementById('inner3').innerHTML = content3;
+
+            
+            document.getElementById('myForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                var inputValue = document.getElementById('inputField').value;
+                if (inputValue === '') {
+                    alert('Por favor, preencha o campo.');
+                } else {
+                    alert('Valor do campo: ' + inputValue);
+                }
+            });
+
+            
+            document.getElementById('button1').addEventListener('click', function() {
+                alert('Botafogo');
+            });
+
+            document.getElementById('button2').addEventListener('click', function() {
+                alert('Palemiras');
+            });
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</body>
+
+</html>
